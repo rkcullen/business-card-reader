@@ -1,7 +1,7 @@
 ## business-card-reader
 
 ### Build Requirements
-To sucsessfully compile this exercise the following is required to run in a command shell: 
+To sucsessfully compile and run this exercise the following is required to run in a command shell: 
 - JDK (Java Development Kit) 1.8 or higher
 - Maven
 
@@ -22,12 +22,12 @@ The exercise requires a single String argument with line breaks surrounded by op
 > Fax: 410-555-4321<br/>
 > lisa.haung@foobartech.com"<br/> 
 
-Run the exercise and pass the String argument to the command line as follows:<br/><br/>
+To run the exercise, pass the String argument to the command line as follows:<br/><br/>
 `java -cp target/business-card-parser-1.0.jar org.fivelands.parser.Main` "Foobar Technologies<br/> 
 Analytic Developer <br/>
 Lisa Haung <br/>
 1234 Sentry Road <br/> 
 Columbia, MD 12345 <br/>
-Phone: (410) 555-1234one <br/> 
+Phone: (410) 555-1234<br/> 
 Fax: 410-555-4321 <br/>
 lisa.haung@foobartech.com" 
