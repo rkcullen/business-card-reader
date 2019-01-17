@@ -6,10 +6,11 @@ To sucsessfully compile this exercise the following is required to run in a comm
 - Maven
 
 ### Build Command
-Run the following command in a command shell after cloning the repository:<br/>
+Run the following command in a command shell after cloning the repository:<br/><br/>
 `mvn clean verify` 
 
 ### Run the Application
+This application parses out the name, phone number and email address from a sample business card text.<br/>
 The exercise requires a single String argument with line breaks surrounded by open/closed quotes, for example:<br/>
 
 > "Foobar Technologies<br/>
@@ -21,7 +22,7 @@ The exercise requires a single String argument with line breaks surrounded by op
 > Fax: 410-555-4321<br/>
 > lisa.haung@foobartech.com"<br/> 
 
-Run the exercise and pass the String argument to the command line as follows:<br/>
+Run the exercise and pass the String argument to the command line as follows:<br/><br/>
 `java -cp target/business-card-parser-1.0.jar org.fivelands.parser.Main` "Foobar Technologies<br/> 
 Analytic Developer <br/>
 Lisa Haung <br/>
