@@ -1,0 +1,7 @@
+#Don't track folters
+/target
+
+#Files
+.classpath
+.project
+.settings
