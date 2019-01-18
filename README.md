@@ -5,8 +5,8 @@ To sucsessfully compile and run this exercise the following is required to run i
 - JDK (Java Development Kit) 1.8 or higher
 - Maven
 
-### Build Command
-Run the following command in a command shell after cloning the repository:<br/><br/>
+### Build the Application 
+After cloning the repository, use maven to build the exercise by running the following command in a command shell:<br/><br/>
 `mvn clean verify` 
 
 ### Run the Application
