@@ -23,11 +23,11 @@ The exercise requires a single String argument with line breaks surrounded by op
 > lisa.haung@foobartech.com"<br/> 
 
 To run the exercise, pass the String argument to the command line as follows:<br/><br/>
-`java -cp target/business-card-parser-1.0.jar org.fivelands.parser.Main` "Foobar Technologies<br/> 
-&gt;Analytic Developer <br/>
-&gt;Lisa Haung <br/>
-&gt;1234 Sentry Road <br/> 
-&gt;Columbia, MD 12345 <br/>
-&gt;Phone: (410) 555-1234<br/> 
-&gt;Fax: 410-555-4321 <br/>
-&gt;lisa.haung@foobartech.com" 
+`java -cp target/business-card-parser-1.0.jar org.fivelands.parser.Main "Foobar Technologies`<br/> 
+`&gt;Analytic Developer` <br/>
+`&gt;Lisa Haung` <br/>
+`&gt;1234 Sentry Road` <br/> 
+`&gt;Columbia, MD 12345` <br/>
+`&gt;Phone: (410) 555-1234`<br/> 
+`&gt;Fax: 410-555-4321` <br/>
+`&gt;lisa.haung@foobartech.com`" 
