@@ -14,11 +14,16 @@ import org.fivelands.parser.model.impl.ContactInfoImpl;
 public class Main {
 	
     public static void main( String[] args ){
-    	ContactInfo info = parseDocument(args[0], p -> new BusinessCardParserImpl().getContactInfo(p));
     	
-    	System.out.println("Name: " + info.getName() + "\n" 
-    			+ "Phone: " + info.getPhoneNumber() + "\n" 
-    			+ "Email: " + info.getEmailAddress());
+    	if(args.length == 0){
+    		System.out.println("Please enter business card text!");
+    	} else {
+	    	ContactInfo info = parseDocument(args[0], p -> new BusinessCardParserImpl().getContactInfo(p));
+	    	
+	    	System.out.println("Name: " + info.getName() + "\n" 
+	    			+ "Phone: " + info.getPhoneNumber() + "\n" 
+	    			+ "Email: " + info.getEmailAddress());
+    	}
     }
     
     private static ContactInfo parseDocument(String text, BusinessCardParser parser) {

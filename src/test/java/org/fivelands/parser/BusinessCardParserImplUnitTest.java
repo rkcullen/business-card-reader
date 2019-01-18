@@ -115,7 +115,7 @@ public class BusinessCardParserImplUnitTest {
 	}
 	
 	
-	private static ContactInfo parseDocument(String text, BusinessCardParser parser) throws Exception {
+	private ContactInfo parseDocument(String text, BusinessCardParser parser) throws Exception {
 		return parser.getContactInfo(text);
 	}
 
