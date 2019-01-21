@@ -81,7 +81,7 @@ public class BusinessCardParserImplUnitTest {
 	}
 	
 	@Test
-	public void testEmptyContactInfo() throws Exception {
+	public void testEmptyNullContactInfo() throws Exception {
 		
 		businessCardParser.getContactInfo("Document");
 		
