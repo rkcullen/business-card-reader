@@ -1,6 +1,6 @@
 ## business-card-reader
 
-Use the instructions in GitHub to clone this repository to your desktop using git or subversion<br/><br/>
+Use the instructions in GitHub to clone this repository to your desktop using git or subversion<br/>
 
 ### Build Requirements
 To sucsessfully compile and run this exercise the following is required to run in a command shell: 
