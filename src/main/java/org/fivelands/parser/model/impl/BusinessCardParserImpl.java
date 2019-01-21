@@ -12,10 +12,15 @@ import org.fivelands.parser.enums.Filters;
  * Business Card Implementation class
  * @author rkcullen
  * @version 1.0
- *
  */
 public class BusinessCardParserImpl implements BusinessCardParser {
 
+	/**
+	 * Main logic to extract contact information from business card text
+	 * @param String document -- entire business card text
+	 * @return ContactInfo contactInfo
+	 * @throws Exception
+	 */
 	@Override
 	public ContactInfo getContactInfo(String document) throws Exception {
 
