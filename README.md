@@ -1,5 +1,7 @@
 ## business-card-reader
 
+Use the instructions in GitHub on how to clone a repository to your desktop using git or subversion<br/><br/>
+
 ### Build Requirements
 To sucsessfully compile and run this exercise the following is required to run in a command shell: 
 - JDK (Java Development Kit) 1.8 or higher

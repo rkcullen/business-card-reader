@@ -4,6 +4,7 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.doCallRealMethod;
 
 import java.util.Optional;
 import java.util.List;
@@ -13,15 +14,14 @@ import org.mockito.InjectMocks;
 import org.mockito.ArgumentMatchers;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
+
 import org.junit.Test;
 import org.junit.Before;
+
 import org.fivelands.parser.model.BusinessCardParser;
 import org.fivelands.parser.model.ContactInfo;
 import org.fivelands.parser.model.impl.BusinessCardParserImpl;
 import org.fivelands.parser.model.impl.ContactInfoImpl;
-
-
-
 
 /**
  * Unit tests
@@ -81,13 +81,21 @@ public class BusinessCardParserImplUnitTest {
 	}
 	
 	@Test
-	public void testSizeOfList() throws Exception {
+	public void testEmptyContactInfo() throws Exception {
 		
 		businessCardParser.getContactInfo("Document");
 		
 		Mockito.verify(businessCardParser).getContactInfo("Document");
 		
 		assertEquals(businessCardParser.getContactInfo("Document"), null);
+	}
+	
+	@Test(expected = Exception.class)
+	public void testExceptionThrown() throws Exception {
+		
+		doCallRealMethod().when(businessCardParser).getContactInfo(Mockito.anyString());
+		
+		businessCardParser.getContactInfo("Document");
 	}
 	
 	@Test

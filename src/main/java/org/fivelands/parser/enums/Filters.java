@@ -4,6 +4,11 @@ import java.util.function.Predicate;
 import java.util.regex.Pattern;
 import java.util.List;
 
+/**
+ * Filter Type class for all regex filters and any helper methods
+ * @author rkcullen
+ * @version 1.0
+ */
 public enum Filters {
 	
 	EMAIL(Pattern.compile("^(.*@.*)$").asPredicate()),
@@ -20,7 +25,7 @@ public enum Filters {
 	}
 	
 	/**
-	 * 
+	 * Filters email address
 	 * @param List tokens
 	 * @return String emailAddress
 	 */
@@ -34,7 +39,7 @@ public enum Filters {
 	}
 
 	/**
-	 * 
+	 * Filters phone number
 	 * @param List tokens
 	 * @return String phoneNumber
 	 */
@@ -51,7 +56,7 @@ public enum Filters {
 	}
 
 	/**
-	 * 
+	 * Filters first, last name with supplied regex 
 	 * @param List tokens
 	 * @param String regex
 	 * @return String name
