@@ -5,7 +5,7 @@ import java.util.regex.Pattern;
 import java.util.List;
 
 /**
- * Filter Type class for all regex filters and any helper methods
+ * Filter Type enum for all regex filters and any helper methods
  * @author rkcullen
  * @version 1.0
  */
@@ -52,7 +52,6 @@ public enum Filters {
 	            .findFirst()
 	            .get()
 	            .replaceAll("[^\\d.]", "");
-	
 	}
 
 	/**
@@ -68,7 +67,6 @@ public enum Filters {
 	            .filter(s -> s.matches("(?i)" + regex))
 	            .findFirst()
 	            .get();
-	
 	}
 
 }

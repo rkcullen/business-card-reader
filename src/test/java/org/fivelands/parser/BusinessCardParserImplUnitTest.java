@@ -1,17 +1,10 @@
 package org.fivelands.parser;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.when;
 import static org.mockito.Mockito.doCallRealMethod;
 
-import java.util.Optional;
-import java.util.List;
-
 import org.mockito.Mock;
-import org.mockito.InjectMocks;
-import org.mockito.ArgumentMatchers;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 
@@ -24,7 +17,7 @@ import org.fivelands.parser.model.impl.BusinessCardParserImpl;
 import org.fivelands.parser.model.impl.ContactInfoImpl;
 
 /**
- * Unit tests
+ * Business Card Implementation Unit tests
  * @author rkcullen
  * @version 1.0
  */

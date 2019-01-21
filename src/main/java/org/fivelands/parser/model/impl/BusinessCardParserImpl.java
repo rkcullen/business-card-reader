@@ -36,17 +36,24 @@ public class BusinessCardParserImpl implements BusinessCardParser {
 			System.out.println("Your business card is missing a phone number!");
 		}
 		
-		String filter = emailAddress.substring(0, emailAddress.indexOf("@"));
-		Optional<String> regex = Optional.empty();
-		if(filter.indexOf(".") > 0) {
-		    String[] emailTokens = filter.trim().split("\\.");
-		    regex = Optional.of(emailTokens[0] + "\\s" + emailTokens[1]);
-		} else {
-		    regex = Optional.of(filter.substring(0,1) + ".*\\s" + filter.substring(1, filter.length()));
-		}
-
-		String firstLastName = Filters.filterFullName(tokens, regex.get());
+		String firstLastName = Filters.filterFullName(tokens, getCorrectedNameRegexFromEmail(emailAddress).get());
 
 		return new ContactInfoImpl(firstLastName, phoneNumber, emailAddress);
+	}
+	
+	/**
+	 * Logic to construct regular expression depending on name of email address
+	 * @param String emailAddress
+	 * @return Optional<String> regex
+	 */
+	private Optional<String> getCorrectedNameRegexFromEmail(String emailAddress) {
+		String name = emailAddress.substring(0, emailAddress.indexOf("@"));
+		String[] nameTokens = name.trim().split("[_.]");
+		if(nameTokens.length == 1){
+			//This is a first initial last name email address
+			return Optional.of(name.substring(0,1) + ".*\\s" + name.substring(1, name.length()));
+		} else {
+			return Optional.of(nameTokens[0].substring(0,1) + ".*\\s" +  nameTokens[1]);
+		}
 	}
 }
